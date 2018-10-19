@@ -1,0 +1,7 @@
+$(document).ready(function(){
+    var loggedInUser = $.get('/api/v1/users/self', function(user){
+        var url = `https://forms.zohopublic.com/jameshoffman/form/InPersonFBEForm/formperma/76L7rGLodDTysNJWimTM3tj4pCb_7nCIjFIDSqg1dO8?email=${user.email}`
+        var iFrame = `<iframe frameborder="0" style="height:500px;width:99%;border:none;" src='${url}'></iframe>`
+        $(".custom-iframe").append(iFrame);
+    })
+})
